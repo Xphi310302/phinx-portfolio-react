@@ -46,7 +46,7 @@ const About: FC = () => {
           >
             <div className="relative w-64 h-64 rounded-full overflow-hidden border-4 border-primary/20 shadow-xl">
               <img
-                src="src/assets/images/about.jpg"
+                src="/assets/images/about.jpg"
                 alt="Phi Nguyen"
                 className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
               />
