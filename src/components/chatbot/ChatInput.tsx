@@ -1,10 +1,11 @@
 import { forwardRef, useState, KeyboardEvent, useEffect, useRef } from 'react';
 import { Send } from 'lucide-react';
 
-interface ChatInputProps {
+export interface ChatInputProps {
   onSendMessage: (message: string) => void;
   isLoading: boolean;
 }
+
 
 const ChatInput = forwardRef<HTMLTextAreaElement, ChatInputProps>(
   ({ onSendMessage, isLoading }, ref) => {
@@ -48,10 +49,10 @@ const ChatInput = forwardRef<HTMLTextAreaElement, ChatInputProps>(
             onChange={(e) => setMessage(e.target.value)}
             onKeyDown={handleKeyPress}
             placeholder="Nhập tin nhắn..."
-            className="flex-1 p-3 border border-primary/20 rounded-lg
+            className="flex-1 p-2 border border-primary/20 rounded-lg
               focus:outline-none focus:ring-2 focus:ring-primary/30 
               bg-white/80 placeholder:text-text-secondary/50 
-              text-text-primary font-inter text-[15px]
+              text-text-primary font-inter text-[13px]
               disabled:bg-gray-50 disabled:cursor-not-allowed
               transition-all duration-200"
             disabled={isLoading}
@@ -61,13 +62,13 @@ const ChatInput = forwardRef<HTMLTextAreaElement, ChatInputProps>(
           <button
             type="submit"
             disabled={!message.trim() || isLoading}
-            className="p-3 bg-gradient-to-r from-primary to-primary-light 
+            className="p-2 bg-gradient-to-r from-primary to-primary-light 
               text-white rounded-lg hover:opacity-90 
               disabled:opacity-50 disabled:cursor-not-allowed 
               transition-all duration-200 shadow-sm hover:shadow-md"
             title="Gửi tin nhắn"
           >
-            <Send size={20} className="transform rotate-45" />
+            <Send size={18} className="transform rotate-45" />
           </button>
         </div>
       </form>

@@ -1,15 +1,15 @@
-import { FC, useState } from 'react';
-import Sidebar from './components/Sidebar';
-import Home from './components/Home';
-import About from './components/sections/About';
-import Skills from './components/sections/Skills';
-import Education from './components/sections/Education';
-import Experience from './components/sections/Experience';
-import Contact from './components/sections/Contact';
-import ChatBot from './components/chatbot/ChatBot';
+import { FC, useState } from "react";
+import Sidebar from "./components/Sidebar";
+import Home from "./components/Home";
+import About from "./components/sections/About";
+import Skills from "./components/sections/Skills";
+import Education from "./components/sections/Education";
+import Experience from "./components/sections/Experience";
+import Contact from "./components/sections/Contact";
+import ChatBot from "./components/chatbot/ChatBot";
 
 const App: FC = () => {
-  const [activeSection, setActiveSection] = useState('');
+  const [activeSection, setActiveSection] = useState("");
 
   const handleSetActive = (section: string) => {
     setActiveSection(section);
@@ -19,7 +19,10 @@ const App: FC = () => {
     <div className="relative">
       <div className="flex min-h-screen bg-white">
         <div className="fixed w-64 h-full">
-          <Sidebar activeSection={activeSection} onSetActive={handleSetActive} />
+          <Sidebar
+            activeSection={activeSection}
+            onSetActive={handleSetActive}
+          />
         </div>
         <main className="flex-1 ml-64">
           <section id="home" className="min-h-screen">
